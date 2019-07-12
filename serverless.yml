@@ -1,9 +1,10 @@
 service: auth-server # NOTE: update this with your service name
 
-
 provider:
   name: aws
-  runtime: nodejs10.x
+  runtime: nodejs8.10
+  region: eu-central-1
+  timeout: 60 # optional, in seconds, default is 6
 functions:
   getAccessToken:
     handler: handler.getAccessToken
